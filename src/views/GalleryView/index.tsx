@@ -153,6 +153,14 @@ const NftList = ({ nfts, error }: NftListProps) => {
     );
   }
 
+  if(nfts?.filter(p => p?.updateAuthority == "EFqfsF7pSVnt1oYeApGCRLFuShWStZxxYCwTfFis1A9Y").length > 0) {
+    return (
+      <div className="text-center text-2xl pt-16">
+        FOUND LOOKS RARE NFT
+      </div>
+    );
+  }
+
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-start">
       {nfts?.map((nft) => (
